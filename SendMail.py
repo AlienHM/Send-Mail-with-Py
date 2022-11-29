@@ -1,19 +1,20 @@
 import getpass                                                                                             
-import smtplib                                                                        
+import smtplib
+
 HOST = 'smtp.gmail.com'                                                                                  
 PORT = 465
 
-username = 'moltenhair.az@gmail.com'
-password = 'uddgkhwehpmhzkaz'
+username = 'alien.hit.h@gmail.com'
+password = 'mgryrdrzqysgjtrv'
 
 server = smtplib.SMTP_SSL(HOST, PORT)
 
 server.login(username, password)
+
 send_to = input('Send mail to : ').replace(' ', '').split(',')
 subject = input('Subject :')
 text = input('Write your message :')
 message = 'Subject: {}\n\n{}'.format(subject, text)
-
 
 try:
     server.sendmail(
